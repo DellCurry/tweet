@@ -9,11 +9,10 @@ body{
 
 .main{
     font-size: 14px;
-    font-family:"Arial";
     height: 300px;
     position: relative;
   	left:5%;
-      top:50px;
+    top:50px;
     width: 1600px;
 }
 
@@ -22,6 +21,7 @@ body{
 }
 
 .hot{
+    font-family:"Arial";
     left:50%;
     /* background: white; */
     margin-top: 50px;
@@ -29,22 +29,15 @@ body{
 }
 
 .topic{
-    background: white;
+    background:lightblue;
     float: left;
     width:500px;
     position: relative;
 }
 
-.top{
+.top,.rec{
     margin-left: 50px;
     background: white;
-    float: left;
-    width: 500px;
-    position: relative;
-}
-.rec{
-    background: white;
-    margin-left: 50px;
     float: left;
     width: 500px;
     position: relative;
@@ -66,10 +59,7 @@ th {
     color: #fff;
 }
 
-td {
-    border: 1px solid#777;
-}
-tbody tr:nth-child(odd) {
+.top_table tbody tr:nth-child(odd) {
  
     background: #ccc;
 
