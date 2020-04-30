@@ -79,5 +79,5 @@ if __name__ == "__main__":
     scheduler=APScheduler()
     scheduler.init_app(app)
     scheduler.start()
-    app.run(host='localhost', port=5001,debug=True)
+    app.run(host='localhost', port=80,debug=True)
 

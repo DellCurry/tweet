@@ -37,7 +37,7 @@ def send_df_to_dashboard(df):
         top_tags = top_tags[0:5]
         tags_count = tags_count[0:5]
     # initialize and send the data through REST API
-    url = 'http://localhost:5001/updateData'
+    url = 'http://localhost:80/updateData'
     request_data = {'label': str(top_tags), 'data': str(tags_count)}
     print(request_data)
     response = requests.post(url, data=request_data)
