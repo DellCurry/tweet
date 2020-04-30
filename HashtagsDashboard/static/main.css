@@ -1,0 +1,76 @@
+body{
+    font-size: 12px;
+    text-align: center;
+    font-family:"Arial";
+	background-image:url('tweet1.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.main{
+    font-size: 14px;
+    font-family:"Arial";
+    height: 300px;
+    position: relative;
+  	left:5%;
+      top:50px;
+    width: 1600px;
+}
+
+.container{
+    margin:0 auto;
+}
+
+.hot{
+    left:50%;
+    /* background: white; */
+    margin-top: 50px;
+    font-size: large;
+}
+
+.topic{
+    background: white;
+    float: left;
+    width:500px;
+    position: relative;
+}
+
+.top{
+    margin-left: 50px;
+    background: white;
+    float: left;
+    width: 500px;
+    position: relative;
+}
+.rec{
+    background: white;
+    margin-left: 50px;
+    float: left;
+    width: 500px;
+    position: relative;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    font-family: Futura, Arial, sans-serif;
+}
+
+th,td {
+    padding: .65em;
+}
+
+th {
+    background: #555 nonerepeat scroll 0 0;
+    border: 1px solid #777;
+    color: #fff;
+}
+
+td {
+    border: 1px solid#777;
+}
+tbody tr:nth-child(odd) {
+ 
+    background: #ccc;
+
+}

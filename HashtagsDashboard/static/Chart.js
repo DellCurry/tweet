@@ -10633,3 +10633,17 @@ module.exports = function(Chart) {
 
 },{"1":1}]},{},[7])(7)
 });
+
+function getTop(topic){
+	var temp = document.createElement("form");
+  	temp.action = '/getTop';
+  	temp.method = "post";
+  	temp.style.display = "none";
+    var opt = document.createElement("textarea");
+    opt.name = 'topic';
+    opt.value = topic;
+    // alert(opt.name)
+    temp.appendChild(opt);
+  document.body.appendChild(temp);
+  temp.submit();
+}

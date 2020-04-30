@@ -4,19 +4,65 @@
         <meta charset="utf-8"/>
         <title>Top Trending Twitter Hashtags</title>
         <script src='static/Chart.js'></script>
+        <link rel="stylesheet" href="static/main.css" type="text/css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 
     </head>
 
     <body>
-        <center>
-            <h2>Top Trending Twitter Hashtags</h2>
-            <div style="width:700px;height=500px">
-                <canvas id="chart"></canvas>
+        <div class ="main">
+            <div class ="topic">
+                <div class="trend">
+                    <font size="5">Top Trending Twitter Hashtags</font>
+                    <div class="container" style="width:300px;">
+                        <canvas margin=auto id="chart"></canvas>
+                    </div>
+                </div>
+                <div class="hot"  left:50% overflow-x="none">
+                    <table overflow-y="scroll">
+                        <thead>
+                            <td align="center">
+                            <font size="10" color="red">Hot Topics</font>
+                            </td>
+                        </thead>
+                        {% for result in hot %}
+                        <tr>
+                            <td align="center"><span class="hot5" onclick="getTop('{{result}}');">&#x1F4A5 &#x1F4A5 {{result}}</span></td>
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
             </div>
-        </center>
-
+            <div class="top">
+                <table overflow-y="scroll">
+                    <thead>
+                        <td align="center">
+                        <font size="10">Top 1</font>
+                        </td>
+                    </thead>
+                    {% for result in top %}
+                    <tr>
+                        <td align="center"><span>{{result}}</span></td>
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+            <div class="rec">
+                <table overflow-y="scroll">
+                    <thead>
+                        <td align="center">
+                        <font size="10">Recommended</font>
+                        </td>
+                    </thead>
+                    {% for result in rec %}
+                    <tr>
+                        <td align="center"><span>{{result}}</span></td>
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+        </div>
         <script>
 
            var ctx = document.getElementById("chart");
@@ -37,21 +83,9 @@
                             'rgba(54, 162, 235, 0.2)',
                             'rgba(255, 206, 86, 0.2)',
                             'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
                             'rgba(153, 102, 255, 0.2)'
                         ],
                         borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)',
                             'rgba(255,99,132,1)',
                             'rgba(54, 162, 235, 1)',
                             'rgba(255, 206, 86, 1)',
@@ -60,18 +94,8 @@
                         ],
                         borderWidth: 1
                     }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
-                            }
-                        }]
-                    }
                 }
            });
-
 
            var src_Labels = [];
            var src_Data = [];
@@ -88,11 +112,6 @@
                 myChart.update();
 
             },1000);
-
-
-
-
-
         </script>
 
 
